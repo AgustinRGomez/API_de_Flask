@@ -46,7 +46,7 @@ class PandaModel:
     def getAllCountries(self,condicion1,condicion2):
         
         #lee el archivo csv por medio de panda
-        datos = pd.read_csv("C:\\Users\Downloads\\BLI_28032019144925238.csv",header = 0 )
+        datos = pd.read_csv("C:\\Users\\Downloads\\BLI_28032019144925238.csv",header = 0 )
         
         list_country = []
         df = pd.DataFrame(datos)
@@ -57,13 +57,14 @@ class PandaModel:
                 #asigno las variables para armar el diccionario
                 self.PandaDic.country = df.loc[i,"Country"]
                 self.PandaDic.value = df.loc[i,"Value"]
+                
                 #armo los diccionarios y los agrego a una lista 
                 self.PandaDic.getDiccionary(list_country)
 
         self.PandaDic.SortList(list_country)
         
         
-        return list_country # me devolveria {"Country": country, "Value": value } ordenado
+        return list_country # me devolveria una lista de {"Country": country, "Value": value } ordenado
 
 
 class PandaDic:
@@ -80,7 +81,6 @@ class PandaDic:
     def SortList(self,list_country):
         list_country.sort(key = lambda p: p["Value"],reverse = True)
         
-
         
 if __name__ == "__main__":
     
