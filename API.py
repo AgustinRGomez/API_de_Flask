@@ -25,6 +25,7 @@ def getDataJson():
     if (float(V1) > float(V2)):
         return "V1 no debe ser mayor a V2"
         
+    #devuelve la lista de diccionarios
     return json.dumps(Core.getCountriesBy(float(V1),float(V2)))
   
     
@@ -59,7 +60,7 @@ class PandaModel:
                 self.PandaDic.value = df.loc[i,"Value"]
                 
                 #armo los diccionarios y los agrego a una lista 
-                self.PandaDic.getDiccionary(list_country)
+                self.PandaDic.addDiccionary(list_country)
 
         self.PandaDic.SortList(list_country)
         
@@ -74,7 +75,7 @@ class PandaDic:
         self.value = value
         
     #agrega los diccionarios en la lista
-    def getDiccionary(self,list_country):
+    def addDiccionary(self,list_country):
         list_country.append({"Country": self.country, "Value": self.value })
         
     #ordena la lista de mayor a menor dependiendo de la variable Value
