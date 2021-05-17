@@ -26,7 +26,7 @@ def getDataJson():
         return "V1 no debe ser mayor a V2"
         
     return json.dumps(Core.getCountriesBy(float(V1),float(V2)))
-       
+  
     
 class CountryFinder:
     
