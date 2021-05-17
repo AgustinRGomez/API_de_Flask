@@ -46,7 +46,7 @@ class PandaModel:
     def getAllCountries(self,condicion1,condicion2):
         
         #lee el archivo csv por medio de panda
-        datos = pd.read_csv("C:\\Users\Liliana\\Downloads\\BLI_28032019144925238.csv",header = 0 )
+        datos = pd.read_csv("C:\\Users\Downloads\\BLI_28032019144925238.csv",header = 0 )
         
         list_country = []
         df = pd.DataFrame(datos)
