@@ -76,9 +76,9 @@ class PandaDic:
     def getDiccionary(self,list_country):
         list_country.append({"Country": self.country, "Value": self.value })
         
-    #ordena la lista de menor a mayor dependiendo de la variable Value
+    #ordena la lista de mayor a menor dependiendo de la variable Value
     def SortList(self,list_country):
-        list_country.sort(key = lambda p: p["Value"])
+        list_country.sort(key = lambda p: p["Value"],reverse = True)
         
 
         
