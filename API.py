@@ -54,10 +54,10 @@ class PandaModel:
         for i in range (1,len(df)):
             if df.loc[i,"Value"] >= condicion1 and df.loc[i,"Value"] <= condicion2:
 
-                #asigno las variables para el diccionario
+                #asigno las variables para armar el diccionario
                 self.PandaDic.country = df.loc[i,"Country"]
                 self.PandaDic.value = df.loc[i,"Value"]
-                #armo los diccionarios y los agrego una lista 
+                #armo los diccionarios y los agrego a una lista 
                 self.PandaDic.getDiccionary(list_country)
 
         self.PandaDic.SortList(list_country)
