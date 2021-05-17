@@ -1,3 +1,4 @@
+# llamo a las librerias de python que necesito
 import pandas as pd
 from flask import Flask,request
 import json
@@ -16,18 +17,17 @@ def getDataJson():
        
     Core.PandaModel = Panda
     Core.PandaModel.PandaDic = PandaD
+    
     #asigno las variables  
     V1 = request.args.get("V1")
     V2 = request.args.get("V2")
-
+    # verifico los valores de V1 y V2
     if (float(V1) > float(V2)):
         return "V1 no debe ser mayor a V2"
         
     return json.dumps(Core.getCountriesBy(float(V1),float(V2)))
        
-       
-       
-
+    
 class CountryFinder:
     
     def _init_(self,PandaModel):
@@ -45,8 +45,7 @@ class PandaModel:
         
     def getAllCountries(self,condicion1,condicion2):
         
-        #lee el archivo csv
-       
+        #lee el archivo csv por medio de panda
         datos = pd.read_csv("C:\\Users\Liliana\\Downloads\\BLI_28032019144925238.csv",header = 0 )
         
         list_country = []
@@ -55,16 +54,16 @@ class PandaModel:
         for i in range (1,len(df)):
             if df.loc[i,"Value"] >= condicion1 and df.loc[i,"Value"] <= condicion2:
 
-                #asigno las variables 
+                #asigno las variables para el diccionario
                 self.PandaDic.country = df.loc[i,"Country"]
                 self.PandaDic.value = df.loc[i,"Value"]
-                #armo los diccionarios y los agrego una lista
+                #armo los diccionarios y los agrego una lista 
                 self.PandaDic.getDiccionary(list_country)
 
         self.PandaDic.SortList(list_country)
         
         
-        return list_country #{"Country": country, "Value": value } ordenado
+        return list_country # me devolveria {"Country": country, "Value": value } ordenado
 
 
 class PandaDic:
@@ -77,7 +76,7 @@ class PandaDic:
     def getDiccionary(self,list_country):
         list_country.append({"Country": self.country, "Value": self.value })
         
-    #ordena la lista de menor a mayor dependiendo el Value
+    #ordena la lista de menor a mayor dependiendo de la variable Value
     def SortList(self,list_country):
         list_country.sort(key = lambda p: p["Value"])
         
