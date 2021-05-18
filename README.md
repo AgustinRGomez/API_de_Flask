@@ -27,5 +27,5 @@ porque sino la aplicacion no podra ejecutar la API
    
  Como yo utilicé la aplicación Insomnia tuve que crear un proyecto ,y en la opción GET agregar el enlace y hacer clic en Send para que me devuelva la lista de paises.
  
-   ![Insomnia](https://user-images.githubusercontent.com/84295373/118705393-8ec05180-b7ee-11eb-9160-55951f6d4807.jpg)
+   ![image](https://user-images.githubusercontent.com/84295373/118707000-65082a00-b7f0-11eb-880f-6fc0fc9dd91b.png)
 
