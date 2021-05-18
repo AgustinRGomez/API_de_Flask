@@ -10,7 +10,7 @@
 | Flask |
 | Json |
 
-porque sino la aplicacion no podra ejecutar la API.
+porque sino la aplicacion no podra ejecutar el codigo.
 
 ## Como probar la API
  Para probar la API se hace lo siguiente: 
