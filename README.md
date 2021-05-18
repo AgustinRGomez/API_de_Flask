@@ -1,6 +1,6 @@
 # API_de_Flask
 
-###Ejecucion de la API
+#Ejecucion de la API
 - Para ejecutar la API se necesita utilizar una aplicación Python 3 que me lea código , en mi caso utilice la aplicación IDLE (Python 3.6). 
 - Es Importante, que la aplicación Python que se va a utilizar tenga las siguientes librerias:
 
