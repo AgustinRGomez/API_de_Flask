@@ -10,9 +10,9 @@
 | Flask |
 | Json |
 
-   porque sino la aplicacion no podra ejecutar la API
+    porque sino la aplicacion no podra ejecutar la API
 
-##Como probar la API
+## Como probar la API
  Para probar la API se hace lo siguiente: 
  1. Ejecutar el Código con la aplicación Python
  2. Al ejecutar el código, la aplicación devolverá un enlace que deberá ser copiado y colocado en cualquier ordenador que tengan (Google Chrome, Mozilla, Internet Explorer, etc.). En mi caso lo que hice fue usar la aplicación Insomnia. 
