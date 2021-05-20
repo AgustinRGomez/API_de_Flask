@@ -11,7 +11,9 @@
 | Json |
 
    porque si no la aplicación no podrá ejecutar el código.
- - También es importante descargar el archivo BLI_28032019144925238.csv ya que, sin él, el código no podrá acceder a los datos (Country, Value) que se necesitan para devolver la lista de diccionarios.
+ - También es importante descargar el archivo BLI_28032019144925238.csv ya que, sin él, el código no podrá acceder a los datos (Country, Value) que se necesitan para devolver la lista de diccionarios.El archivo será leido por el código ,si se encuentra en la carpeta de descarga.Si esta en otro lado ,entonces se tendria que buscar el archivo ,copiar su ubicacion y cambiarla de manera manual en el siguiente fragmento de código 
+
+       datos = pd. read_csv("ubicacion_del_archivo\\BLI_28032019144925238.csv",encabezado = 0 )
 
 ## Como probar la API
  Para probar la API se hace lo siguiente: 
