@@ -11,6 +11,7 @@
 | Json |
 
    porque si no la aplicación no podrá ejecutar el código.
+ - También es importante descargar el archivo BLI_28032019144925238.csv ya que, sin él, el código no podrá acceder a los datos (Country, Value) que se necesitan para devolver la lista de diccionarios.
 
 ## Como probar la API
  Para probar la API se hace lo siguiente: 
